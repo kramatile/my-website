@@ -1,0 +1,79 @@
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 100vh;
+    padding: 20px 0;
+    background-color: #050505;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    z-index: 1000;
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nav-item {
+    margin: 0; /* Reset default aside margins */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .section-button {
+    color: #828282c3;
+    text-decoration: none;
+    writing-mode: vertical-rl;
+    transform: rotate(0deg);
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    padding: 12px 8px;
+    transition: all 0.3s ease;
+    display: block; /* Ensures the link fills the aside */
+  }
+  
+  .section-button:hover {
+    color: white;
+    transform: rotate(0deg) scale(1.05);
+  }
+  
+  .section-button.active {
+    color: white;
+    font-weight: bold;
+    border-right: 7px solid #064619;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      width: 100%;
+      height: 60px;
+      flex-direction: row;
+      padding: 0 20px;
+      justify-content: space-around;
+    }
+  
+    .nav-item {
+      height: 100%;
+      flex: 1; /* Allows asides to distribute evenly */
+      display: flex;
+      justify-content: center;
+    }
+  
+    .section-button {
+      writing-mode: horizontal-tb;
+      transform: none;
+      padding: 0 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .section-button.active {
+      border-right: none;
+      border-bottom: 2px solid #1e90ff;
+    }
+  }
