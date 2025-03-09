@@ -1,0 +1,107 @@
+.navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 100vh;
+  padding: 20px 0;
+  background-color: #050505;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  z-index: 1000;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-core {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  z-index: 1000;
+}
+
+.logo {
+  margin-bottom: 60px;
+}
+
+.logo img {
+  height: 150px;
+  width: auto;
+  transition: 1s ease-in-out;
+}
+
+.logo img:hover {
+  transform: rotate(180deg);
+}
+
+.nav-item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.section-button {
+  color: #828282c3;
+  text-decoration: none;
+  writing-mode: vertical-rl;
+  transform: rotate(0deg);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  padding: 12px 8px;
+  transition: all 0.3s ease;
+  display: block;
+}
+
+.section-button:hover {
+  color: white;
+  transform: rotate(0deg) scale(1.05);
+  filter: brightness(1.2);
+}
+
+.nav-item.active {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-weight: bold;
+  border-right: 7px solid #266539;
+}
+
+.nav-item.active .section-button {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+      width: 60px; /* Slightly narrower for mobile, but still vertical */
+      padding: 10px 0;
+  }
+
+  .logo {
+      margin-bottom: 30px;
+  }
+
+  .logo img {
+      height: 80px; /* Smaller logo on mobile */
+      width: auto;
+  }
+
+  .section-button {
+      font-size: 0.9rem; /* Slightly smaller text */
+      padding: 10px 6px;
+  }
+
+  .nav-core {
+      gap: 20px; /* Reduced gap between items */
+  }
+
+  .nav-item.active {
+      border-right: 5px solid #266539; /* Slightly thinner active border */
+  }
+}

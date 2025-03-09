@@ -1,0 +1,62 @@
+.contact-bar{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    left: 80px; /* Align with MainPage’s left edge */
+    width: 100%; /* Span to the right edge of the viewport */
+    z-index: 1000;
+    padding: 10px;
+    height: 100px;
+    background-color: hsla(0, 0%, 7%, .25);
+}
+
+.socials {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.icon{
+    width: 2.4rem;
+    height: 2.4rem;
+    fill:white;
+    transition: fill 1s ease-in-out;
+}
+
+.icon:hover{
+    fill : #266539;
+}
+
+.resume-button {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-left: 1rem ;
+}
+
+.resume {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #266539;
+    border: 2px solid #266539;
+    padding: 10px 20px;
+    margin-left: 30px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.4s ease-in;
+}
+
+.resume:hover {
+    background-color: #266539;
+    color: rgba(0, 0, 0, 0.444);
+}
+

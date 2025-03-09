@@ -1,0 +1,24 @@
+.hero-page {
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-page .myName{
+    font-size: 3rem;
+    margin-bottom: 0;
+    text-align: left;
+
+}
+
+.hero-page .bold{
+    font-weight: 800;
+}
+
+.hero-page .typewriter {
+    color:#3d8a54;
+}
