@@ -1,0 +1,23 @@
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+*.log.*
+.env
+.env.*
+coverage/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.sublime-*
+
+# System
+.DS_Store
+Thumbs.db
+
+# Temporary
+*.tmp
+*.bak
+*.swp

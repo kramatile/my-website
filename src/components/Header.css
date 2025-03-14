@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.header {
+    width: 100%; /* Full width of container */
+    display: flex; /* Flexbox for row layout */
+    flex-direction: row; /* Side-by-side hr and h2 */
+    align-items: center; /* Vertically center */
+    padding: 0; /* Small top/bottom padding, normal left/right */
+}
+
+/* Style the horizontal rule */
+.header hr {
+    flex-grow: 1; /* Stretches to fill space up to the text */
+    height: 0.25px; /* Thin, fixed thickness */
+    background-color: #ffffff; /* White line */
+    border: none; /* Remove default styling */
+    margin-left:20px; /* 5px gap on right, no other margins */
+    box-shadow: 0px 4px 10px rgba(0, 255, 157, 0.3);
+}
+
+/* Style the heading */
+.header h2 {
+    color: white; /* White text */
+    font-weight: 700; /* Slightly lighter than 600 for elegance */
+    font-size: 3.5rem; /* Slightly smaller for refinement */
+    margin: 0; /* No default margin */
+    text-transform: uppercase; /* Elegant uppercase */
+    letter-spacing: 1.5px; /* Subtle spacing */
+    white-space: nowrap; /* Prevents text wrapping */
+    font-family: "Kanit", sans-serif;
+}

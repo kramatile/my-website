@@ -4,7 +4,7 @@
   top: 0;
   width: 80px;
   height: 100vh;
-  padding: 20px 0;
+  padding-bottom: 20px;
   background-color: #050505;
   display: flex;
   flex-direction: column;
@@ -25,11 +25,13 @@
 }
 
 .logo {
+  top :0;
   margin-bottom: 60px;
 }
 
 .logo img {
-  height: 150px;
+  height: 120px;
+  object-fit: cover;
   width: auto;
   transition: 1s ease-in-out;
 }

@@ -4,11 +4,14 @@
     -webkit-box-sizing: border-box;
     position: fixed;
     width: calc(100vw-80px);
-    height: 100%;
     left:80px;
     right:0px;
     top:0;
-    background-color: rgb(40, 36, 36);
+    background-color: linear-gradient(135deg, #1a1a2e, #16213e);
+    width: calc(100vw-80px);
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
 

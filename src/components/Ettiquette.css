@@ -1,0 +1,31 @@
+/* Ettiquette.css */
+.skill-ettiquette {
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #4b5563; /* A more sophisticated gray (Tailwind's gray-700) */
+    padding: 10px 15px; /* Slightly increased padding for better spacing */
+    border-radius: 20px; /* Softer, more modern corners */
+    display: inline-flex; /* Better handling of inline content */
+    align-items: center; /* Vertically center the content */
+    justify-content: center; /* Horizontally center the content */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transitions for hover effects */
+    font-weight: 500; /* Medium weight for better readability */
+    text-transform: uppercase; /* Adds a premium feel */
+    letter-spacing: 0.5px; /* Slight spacing for elegance */
+}
+
+/* Hover effect */
+.skill-ettiquette:hover {
+    background-color: #6b7280; /* Lighter gray on hover (gray-600) */
+    transform: translateY(-2px); /* Subtle lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .skill-ettiquette {
+        font-size: 1.25rem; /* Slightly smaller on mobile */
+        padding: 10px 18px; /* Adjusted padding for smaller screens */
+    }
+}

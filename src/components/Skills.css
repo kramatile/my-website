@@ -1,0 +1,79 @@
+/* Skills.css */
+.skill-container {
+    width: 100%;
+    max-width: 800px; /* Constrain width */
+    margin: 20px auto; /* Center with spacing */
+  }
+  
+  .skill-name {
+    font-size: 1.5em;
+    color: #1f2937; /* Dark gray */
+    background-color: #e5e7eb; /* Light gray */
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    border: none; /* Remove default button border */
+    width: 100%; /* Full width for button */
+    text-align: left;
+  }
+  
+  .skill-name:hover {
+    background-color: #d1d5db; /* Slightly darker on hover */
+  }
+  
+  .skill-name.active {
+    background-color: #9ca3af; /* Distinct active state */
+    color: #ffffff;
+  }
+  
+  .toggle-icon {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 10px;
+  }
+  
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+    padding: 20px;
+    transition: all 0.3s ease; /* Smooth transition for visibility */
+  }
+  
+  .skills.hidden {
+    height: 0;
+    opacity: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  
+  .skills.visible {
+    height: auto;
+    opacity: 1;
+  }
+  
+  .skills-empty {
+    font-size: 1.2rem;
+    color: #6b7280;
+    text-align: center;
+    padding: 20px;
+    font-style: italic;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .skill-name {
+      font-size: 1.5rem;
+      padding: 10px 15px;
+    }
+  
+    .skills {
+      gap: 12px;
+      padding: 15px;
+    }
+  }

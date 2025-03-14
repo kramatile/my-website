@@ -1,46 +1,54 @@
-.contact-bar{
+.contact-bar {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(15, 15, 15, 0.3); /* Semi-transparent dark */
+    backdrop-filter: blur(10px); /* Blur effect */
+    -webkit-backdrop-filter: blur(10px); /* Safari support */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle border */
+  }
+  
+  .contact-content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: sticky;
-    top: 0;
-    left: 80px; /* Align with MainPage’s left edge */
-    width: 100%; /* Span to the right edge of the viewport */
-    z-index: 1000;
     padding: 10px;
-    height: 100px;
-    background-color: hsla(0, 0%, 7%, .25);
-}
-
-.socials {
+    height: 80px; /* Adjust as needed */
+  }
+  
+  .socials {
     display: flex;
     gap: 10px;
     margin-left: 20px;
-}
-
-.icon{
+  }
+  
+  .icon {
     width: 2.4rem;
     height: 2.4rem;
-    fill:white;
+    fill: white;
     transition: fill 1s ease-in-out;
-}
-
-.icon:hover{
-    fill : #266539;
-}
-
-.resume-button {
+  }
+  
+  .icon:hover {
+    fill: #266539;
+  }
+  
+  .resume-button {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    margin-left: 1rem ;
-}
-
-.resume {
+    margin-left: 1rem;
+  }
+  
+  .resume {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -53,10 +61,9 @@
     text-decoration: none;
     border-radius: 4px;
     transition: background-color 0.4s ease-in;
-}
-
-.resume:hover {
+  }
+  
+  .resume:hover {
     background-color: #266539;
     color: rgba(0, 0, 0, 0.444);
-}
-
+  }

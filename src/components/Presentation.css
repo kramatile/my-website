@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+#presentation {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 80px;
+}
+
+.container {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  width: 90%;
+  padding: 30px;
+  max-width: 1500px; /* Constrain width */
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  gap: 40px; /* Space between text and skills */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px; /* Ensure readability on smaller screens */
+}
+
+.text-content p {
+  color: whitesmoke;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  font-family: "Kanit", sans-serif;
+  font-weight: 300; /* Lighter weight for readability */
+}
+
+.links {
+  color: #00ff9d;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* Increased gap for clarity */
+  font-size: 1.5rem;
+  font-family: "Kanit", sans-serif;
+  font-weight: 500;
+}
+
+.presentation-contacts {
+  display: flex;
+  flex-direction: row;
+  gap: 16px; /* More spacing between items */
+  align-items: center;
+  margin-top: 20px;
+}
+
+.icon {
+  width: 32px;
+  height: 32px;
+   /* Match the links color */
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+  fill: #00ff9d; /* Subtle hover effect */
+}
+
+.skills-content {
+  flex: 1;
+  min-width: 300px; /* Ensure skills section doesn't collapse too much */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between skill categories */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #presentation {
+    padding: 40px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .links {
+    font-size: 1.3rem;
+  }
+
+  .icon {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  #presentation {
+    padding: 20px;
+  }
+
+  .container {
+    padding: 15px;
+  }
+}

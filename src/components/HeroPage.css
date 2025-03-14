@@ -1,24 +1,114 @@
+/* HeroPage.css */
 .hero-page {
-    color: white;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: #fff;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 5vw;
+  overflow: hidden;
 }
 
-.hero-page .myName{
-    font-size: 3rem;
-    margin-bottom: 0;
-    text-align: left;
-
+.hero-page .pres {
+  max-width: 900px;
+  margin-top: 5rem;
+  margin-left: 4rem;
+  text-align: left;
 }
 
-.hero-page .bold{
-    font-weight: 800;
+.hero-page .myName {
+  font-size: 5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  font-weight: 900;
+  color: #fff;
+  text-shadow: 0px 4px 10px rgba(0, 255, 157, 0.3);
+  transition: transform 0.3s ease-in-out;
+}
+
+.hero-page .myName:hover {
+  transform: scale(1.02);
+}
+
+.hero-page .bold {
+  font-weight: 900;
+  color: #00ff9d;
+  
+}
+
+.bold.typewriter {
+  box-shadow: 0px 4px 10px rgba(0, 255, 157, 0.3);
 }
 
 .hero-page .typewriter {
-    color:#3d8a54;
+  color: #00ff9d;
+  font-size: 1.75rem;
+  display: inline-block;
+}
+
+.hero-page h4 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ddd;
+}
+
+.hero-page p {
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #bbb;
+  max-width: 600px;
+}
+
+.contact-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  background: #00ff9d;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 10px rgba(0, 255, 157, 0.3);
+}
+
+.contact-button:hover {
+  background: #00cc7d;
+  transform: scale(1.05);
+  box-shadow: 0px 6px 15px rgba(0, 255, 157, 0.4);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-page {
+    align-items: center;
+    text-align: center;
+    padding: 0 2rem;
+  }
+
+  .hero-page .pres {
+    margin-top: 10rem;
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .hero-page .myName {
+    font-size: 2.5rem;
+  }
+
+  .hero-page h4 {
+    font-size: 1.4rem;
+  }
+
+  .hero-page p {
+    font-size: 1.1rem;
+  }
+
+  .contact-button {
+    font-size: 1rem;
+  }
 }
