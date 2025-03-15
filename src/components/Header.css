@@ -29,3 +29,9 @@
     white-space: nowrap; /* Prevents text wrapping */
     font-family: "Kanit", sans-serif;
 }
+
+@media (max-width: 768px) {
+    .header h2{
+        font-size: 1.5rem;
+    }
+}

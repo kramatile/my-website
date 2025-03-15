@@ -1,0 +1,22 @@
+#certifications {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 80px 20px; /* Adjusted for navbar and consistency */
+    color: #ffffff; /* Default text color */
+  }
+  .container {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    width: 100%; /* Full width with max constraint */
+    max-width: 1500px; /* Larger max-width for desktops */
+    padding: 30px;
+    margin: 0 auto; /* Centered */
+  }

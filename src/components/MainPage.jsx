@@ -4,6 +4,7 @@ import "./MainPage.css"
 import HeroPage from "./HeroPage";
 import Presentation from "./Presentation";
 import Projects from "./Projects";
+import Certifications from "./Certifications";
 
 function MainPage(){
     const mainPageRef = useRef(null);
@@ -19,6 +20,9 @@ function MainPage(){
             </div>
             <div className="Prjct">
                 <Projects/>
+            </div>
+            <div className="certifications">
+                <Certifications/>
             </div>
             <div className="past" style={{
                 height: "200vh",

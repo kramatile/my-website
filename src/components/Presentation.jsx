@@ -6,10 +6,10 @@ import "./Presentation.css";
 function Presentation() {
   // Sample skills data (you can pass this as props if needed)
   const skillCategories = [
-    {skillName:"AI & Machine Learning",skillList:["Scickit-learn","TensorFlow","Pytorch","Fundamentals of RL","Spacy","NLTK","OpenCV","YOLO"]},
+    {skillName:"AI & Machine Learning",skillList:["Python","R","Scickit-learn","TensorFlow","Pytorch","Fundamentals of RL","Spacy","NLTK","OpenCV","YOLO"]},
     { skillName: "Frontend Skills", skillList: ["HTML","CSS","JavaScript", "React"] },
     { skillName: "Backend Skills / DevOps", skillList: ["Node.js", "Express","SpringBoot","Flask","Docker","Git/Github"] },
-    {skillName: "Data Management", skillList:["Oracle","PostgreSql","MongoDb","Neo4j"]}
+    {skillName: "Data Management & BigData", skillList:["Oracle","PostgreSql","MongoDb","Neo4j","Hadoop (initiate)"]}
   ];
 
   return (

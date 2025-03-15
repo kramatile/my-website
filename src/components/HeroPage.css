@@ -1,114 +1,172 @@
 /* HeroPage.css */
+
+/* Base Styles */
 .hero-page {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  color: #fff;
-  min-height: 100vh;
-  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark gradient background */
+  color: #ffffff; /* White text for contrast */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding: 0 5vw;
-  overflow: hidden;
+  align-items: flex-start; /* Left alignment by default */
+  padding: 0 5vw; /* Viewport-based padding */
+  overflow: hidden; /* Prevent overflow issues */
+  position: relative; /* Context for potential absolute positioning */
 }
 
+/* Presentation Container */
 .hero-page .pres {
-  max-width: 900px;
-  margin-top: 5rem;
-  margin-left: 4rem;
-  text-align: left;
+  max-width: 900px; /* Max width for desktop */
+  margin-top: 5rem; /* Top spacing */
+  margin-left: 4rem; /* Left offset for desktop */
+  text-align: left; /* Left-aligned text */
 }
 
+/* Name Styling */
 .hero-page .myName {
-  font-size: 5rem;
-  margin-bottom: 1rem;
-  line-height: 1.2;
-  font-weight: 900;
-  color: #fff;
-  text-shadow: 0px 4px 10px rgba(0, 255, 157, 0.3);
-  transition: transform 0.3s ease-in-out;
+  font-size: 5rem; /* Large name */
+  margin-bottom: 1rem; /* Space below name */
+  line-height: 1.2; /* Tight line height */
+  font-weight: 900; /* Bold weight */
+  color: #ffffff; /* White text */
+  text-shadow: 0 4px 10px rgba(0, 255, 157, 0.3); /* Neon green glow */
+  transition: transform 0.3s ease-in-out; /* Smooth hover effect */
 }
 
 .hero-page .myName:hover {
-  transform: scale(1.02);
+  transform: scale(1.02); /* Slight scale on hover */
 }
 
+/* Bold Text Styling */
 .hero-page .bold {
-  font-weight: 900;
-  color: #00ff9d;
-  
+  font-weight: 900; /* Bold weight */
+  color: #00ff9d; /* Neon green accent */
 }
 
+/* Typewriter Effect Styling */
 .bold.typewriter {
-  box-shadow: 0px 4px 10px rgba(0, 255, 157, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 255, 157, 0.3); /* Glow effect */
 }
 
 .hero-page .typewriter {
-  color: #00ff9d;
-  font-size: 1.75rem;
-  display: inline-block;
+  color: #00ff9d; /* Neon green */
+  font-size: 1.75rem; /* Readable size */
+  display: inline-block; /* Inline for typewriter effect */
 }
 
+/* Subtitle Styling */
 .hero-page h4 {
-  margin: 0 0 1.5rem 0;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #ddd;
+  margin: 0 0 1.5rem 0; /* Bottom spacing */
+  font-size: 1.6rem; /* Moderate size */
+  font-weight: 600; /* Medium weight */
+  color: #dddddd; /* Light gray */
 }
 
+/* Paragraph Styling */
 .hero-page p {
-  font-size: 1.2rem;
-  line-height: 1.7;
-  color: #bbb;
-  max-width: 600px;
+  font-size: 1.2rem; /* Readable size */
+  line-height: 1.7; /* Comfortable line height */
+  color: #bbbbbb; /* Light gray */
+  max-width: 600px; /* Constrain width */
 }
 
+/* Contact Button Styling */
 .contact-button {
   display: inline-block;
-  margin-top: 1.5rem;
-  padding: 12px 20px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #1a1a2e;
-  background: #00ff9d;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0px 4px 10px rgba(0, 255, 157, 0.3);
+  margin-top: 1.5rem; /* Top spacing */
+  padding: 12px 20px; /* Comfortable padding */
+  font-size: 1.2rem; /* Readable size */
+  font-weight: 700; /* Bold weight */
+  color: #1a1a2e; /* Dark text */
+  background: #00ff9d; /* Neon green background */
+  border-radius: 8px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease-in-out; /* Smooth transitions */
+  box-shadow: 0 4px 10px rgba(0, 255, 157, 0.3); /* Subtle shadow */
 }
 
 .contact-button:hover {
-  background: #00cc7d;
-  transform: scale(1.05);
-  box-shadow: 0px 6px 15px rgba(0, 255, 157, 0.4);
+  background: #00cc7d; /* Darker green on hover */
+  transform: scale(1.05); /* Slight scale */
+  box-shadow: 0 6px 15px rgba(0, 255, 157, 0.4); /* Stronger shadow */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
+/* Responsive Adjustments */
+
+/* Tablet Range (769px - 1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
   .hero-page {
-    align-items: center;
-    text-align: center;
-    padding: 0 2rem;
+    padding-left: calc(100px + 3vw); /* Offset for navbar (adjust 100px if different) */
+    padding-right: 3vw; /* Right padding */
+    padding-top: 0; /* Reset top padding */
+    padding-bottom: 0; /* Reset bottom padding */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Full height */
   }
 
   .hero-page .pres {
-    margin-top: 10rem;
-    margin-left: 0;
-    max-width: 100%;
+    max-width: 70%; /* Adjustable width */
+    margin: 0; /* Remove margins for flex centering */
+    text-align: left; /* Keep text left-aligned */
   }
 
   .hero-page .myName {
-    font-size: 2.5rem;
+    font-size: 4rem; /* Slightly smaller */
+  }
+
+  .hero-page .typewriter {
+    font-size: 1.5rem; /* Adjusted size */
   }
 
   .hero-page h4 {
-    font-size: 1.4rem;
+    font-size: 1.4rem; /* Adjusted size */
   }
 
   .hero-page p {
-    font-size: 1.1rem;
+    font-size: 1.1rem; /* Adjusted size */
+    max-width: 100%; /* Use full width */
   }
 
   .contact-button {
-    font-size: 1rem;
+    font-size: 1.1rem; /* Adjusted size */
+    padding: 10px 18px; /* Adjusted padding */
+  }
+}
+
+/* Mobile Range (up to 768px) */
+@media (max-width: 768px) {
+  .hero-page {
+    align-items: flex-start; /* Left alignment */
+    text-align: center; /* Center text */
+    padding: 0 2rem; /* Reduced padding */
+  }
+
+  .hero-page .pres {
+    margin-top: 8rem; /* Increased top margin */
+    margin-left: 0; /* Remove left margin */
+    max-width: 100%; /* Full width */
+  }
+
+  .hero-page .myName {
+    font-size: 2.5rem; /* Smaller size */
+  }
+
+  .hero-page .typewriter {
+    font-size: 1.1rem; /* Smaller size */
+  }
+
+  .hero-page h4 {
+    font-size: 1.1rem; /* Smaller size */
+  }
+
+  .hero-page p {
+    font-size: 0.9rem; /* Smaller size */
+  }
+
+  .contact-button {
+    font-size: 0.9rem; /* Smaller size */
   }
 }

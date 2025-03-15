@@ -8,28 +8,34 @@
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 80px;
+  padding: 80px 20px; /* Adjusted for smaller screens */
 }
 
 .container {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  width: 90%;
+  width: 100%; /* Full width with max constraint */
+  max-width: 1500px; /* Larger max-width for desktops */
   padding: 30px;
-  max-width: 1500px; /* Constrain width */
+  margin: 0 auto; /* Centered */
 }
 
 .content {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   display: flex;
   flex-direction: row;
-  gap: 40px; /* Space between text and skills */
-  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Better distribution */
 }
 
 .text-content {
   flex: 1;
-  min-width: 300px; /* Ensure readability on smaller screens */
+  min-width: 280px; /* Slightly smaller min-width for flexibility */
+  max-width: 100%; /* Prevent overflow */
 }
 
 .text-content p {
@@ -38,7 +44,7 @@
   line-height: 1.6;
   margin-bottom: 20px;
   font-family: "Kanit", sans-serif;
-  font-weight: 300; /* Lighter weight for readability */
+  font-weight: 300;
 }
 
 .links {
@@ -46,8 +52,8 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 8px; /* Increased gap for clarity */
+  justify-content: flex-start; /* Left-aligned for consistency */
+  gap: 8px;
   font-size: 1.5rem;
   font-family: "Kanit", sans-serif;
   font-weight: 500;
@@ -56,40 +62,46 @@
 .presentation-contacts {
   display: flex;
   flex-direction: row;
-  gap: 16px; /* More spacing between items */
+  gap: 16px;
   align-items: center;
   margin-top: 20px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .icon {
   width: 32px;
   height: 32px;
-   /* Match the links color */
-  transition: all 0.3s ease;
+  fill: #f9f9f9; /* Ensure fill matches links */
+  transition: transform 0.3s ease; /* Only transform for simplicity */
 }
 
 .icon:hover {
   transform: scale(1.1);
-  fill: #00ff9d; /* Subtle hover effect */
 }
 
 .skills-content {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   flex: 1;
-  min-width: 300px; /* Ensure skills section doesn't collapse too much */
+  min-width: 280px;
   display: flex;
   flex-direction: column;
-  gap: 20px; /* Space between skill categories */
+  gap: 20px;
+  align-items: center;
+  justify-content: center; /* Align skills consistently */
+  align-items: stretch; /* Full width for skills */
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #presentation {
-    padding: 40px;
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .container {
+    max-width: 1000px; /* Reduce max-width for larger tablets */
+    padding: 20px;
   }
 
   .content {
-    flex-direction: column;
-    gap: 20px;
+    gap: 30px;
   }
 
   .text-content p {
@@ -97,21 +109,113 @@
   }
 
   .links {
+    font-size: 1.4rem;
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  #presentation {
+    padding: 60px 15px; /* Reduced padding */
+  }
+
+  .container {
+    max-width: 700px; /* Smaller container */
+    padding: 15px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .text-content {
+    min-width: 100%; /* Full width on smaller screens */
+  }
+
+  .text-content p {
+    font-size: 0.95rem;
+  }
+
+  .links {
     font-size: 1.3rem;
+    justify-content: center; /* Center links on smaller screens */
   }
 
   .icon {
     width: 28px;
     height: 28px;
   }
+
+  .skills-content {
+    min-width: 100%;
+  }
 }
 
 @media (max-width: 480px) {
   #presentation {
-    padding: 20px;
+    padding: 100px 10px; /* Adjusted for navbar overlap */
   }
 
   .container {
-    padding: 15px;
+    padding: 10px;
+    max-width: 100%; /* Full width */
+  }
+
+  .content {
+    gap: 15px;
+  }
+
+  .text-content p {
+    font-size: 0.9rem; /* Slightly larger than before for readability */
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+
+  .links {
+    font-size: 1.2rem;
+    gap: 6px;
+  }
+
+  .presentation-contacts {
+    gap: 12px;
+    justify-content: center; /* Center contacts */
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  #presentation {
+    padding: 80px 8px; /* Minimal padding */
+  }
+
+  .container {
+    padding: 8px;
+  }
+
+  .text-content p {
+    font-size: 0.85rem;
+  }
+
+  .links {
+    font-size: 1.1rem;
+    gap: 5px;
+  }
+
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  .presentation-contacts {
+    gap: 10px;
   }
 }

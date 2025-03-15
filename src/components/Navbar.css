@@ -81,7 +81,7 @@
 
 @media (max-width: 768px) {
   .navbar {
-      width: 60px; /* Slightly narrower for mobile, but still vertical */
+      width: 40px; /* Slightly narrower for mobile, but still vertical */
       padding: 10px 0;
   }
 
@@ -90,12 +90,12 @@
   }
 
   .logo img {
-      height: 80px; /* Smaller logo on mobile */
+      height: 70px; /* Smaller logo on mobile */
       width: auto;
   }
 
   .section-button {
-      font-size: 0.9rem; /* Slightly smaller text */
+      font-size: 0.95rem; /* Slightly smaller text */
       padding: 10px 6px;
   }
 
