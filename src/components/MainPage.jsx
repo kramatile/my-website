@@ -5,6 +5,7 @@ import HeroPage from "./HeroPage";
 import Presentation from "./Presentation";
 import Projects from "./Projects";
 import Certifications from "./Certifications";
+import ContactMe from "./ContactMe";
 
 function MainPage(){
     const mainPageRef = useRef(null);
@@ -24,11 +25,8 @@ function MainPage(){
             <div className="certifications">
                 <Certifications/>
             </div>
-            <div className="past" style={{
-                height: "200vh",
-                width:"100vw",
-                background: "white"
-                }}>
+            <div id="contact-me"className="contact-me">
+                <ContactMe></ContactMe>
             </div>
         </div>
     

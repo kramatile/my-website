@@ -1,22 +1,185 @@
-#certifications {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 80px 20px; /* Adjusted for navbar and consistency */
-    color: #ffffff; /* Default text color */
+
+  /* Certifications.css */
+
+/* Section Styling */
+.certifications-section {
+  box-sizing: border-box;
+  color: #ffffff; /* White text */
+  min-height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px; /* Consistent padding */
+}
+
+/* Container Styling */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Constrain width */
+  margin: 0 auto; /* Center */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Styling (Assuming Header component styling) */
+.container .header {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #00ff9d; /* Neon green */
+  font-size: 2.5rem;
+  font-family: "Kanit", sans-serif; /* Match your font */
+  font-weight: 600;
+}
+
+/* Certifications List */
+.certifications-list {
+  list-style: none; /* Remove bullets */
+  padding: 0;
+  width: 100%; /* Full width */
+  max-width: 1000px; /* Constrain list width */
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Space between items */
+}
+
+/* Certification Item */
+.certification-item {
+  background-color: #2d3748; /* Slightly lighter dark background */
+  padding: 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
+}
+
+.certification-item:hover {
+  background-color: #3b4b66; /* Lighter on hover */
+  transform: translateY(-5px); /* Lift effect */
+}
+
+/* Item Text */
+.certification-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #00ff9d; /* Neon green */
+  margin: 0 0 5px 0;
+}
+
+.certification-issuer {
+  font-size: 1rem;
+  color: #bbbbbb; /* Light gray */
+  margin: 0 0 5px 0;
+}
+
+.certification-date {
+  font-size: 0.9rem;
+  color: #888888; /* Darker gray */
+  margin: 0;
+}
+
+/* Floating Image */
+.floating-image {
+  position: fixed; /* Follow cursor */
+  z-index: 1000; /* Above other elements */
+  pointer-events: none; /* Allow clicks through the image */
+}
+
+.floating-image img {
+  width: 200px; /* Fixed width for image */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  opacity: 0.9; /* Slight transparency */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .certifications-section {
+    padding: 60px 15px;
   }
+
   .container {
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    width: 100%; /* Full width with max constraint */
-    max-width: 1500px; /* Larger max-width for desktops */
-    padding: 30px;
-    margin: 0 auto; /* Centered */
+    max-width: 900px;
   }
+
+  .certifications-list {
+    max-width: 600px;
+  }
+
+  .certification-item {
+    padding: 15px;
+  }
+
+  .certification-title {
+    font-size: 1.3rem;
+  }
+
+  .floating-image img {
+    width: 150px; /* Smaller image on tablets */
+  }
+
+  .container .header {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .certifications-section {
+    padding: 40px 10px;
+  }
+
+  .container {
+    max-width: 600px;
+  }
+
+  .certifications-list {
+    max-width: 100%;
+  }
+
+  .certification-item {
+    padding: 10px;
+  }
+
+  .certification-title {
+    font-size: 1.2rem;
+  }
+
+  .floating-image img {
+    width: 120px; /* Smaller image on mobile */
+  }
+
+  .container .header {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .certifications-section {
+    padding: 100px 10px; /* Adjust for navbar */
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  .certifications-list {
+    gap: 15px;
+  }
+
+  .certification-item {
+    padding: 8px;
+  }
+
+  .certification-title {
+    font-size: 1.1rem;
+  }
+
+  .floating-image img {
+    width: 100px; /* Smallest image on tiny screens */
+  }
+
+  .container .header {
+    font-size: 1.8rem;
+  }
+}
