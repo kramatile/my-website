@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Navbar.css";
 
 const sections = ["Home", "Presentation", "Projects", "Certifications"];
 
-function Navbar() {
+function Navbar({mainPageRef}) {
   const [activeSection, setActiveSection] = useState("Home");
 
   const handleSectionClick = (section) => {
@@ -13,6 +13,34 @@ function Navbar() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    if (!mainPageRef.current) return; // Exit if ref isn’t ready
+
+    const handleScroll = () => {
+      const scrollPosition = mainPageRef.current.scrollTop + 100; // Offset for navbar height
+      sections.forEach((section) => {
+        const sectionId = section === "Contact Me" ? "contact-me" : section.toLowerCase();
+        const element = document.getElementById(sectionId);
+        if (element) {
+          const { offsetTop, offsetHeight } = element;
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
+            setActiveSection(section);
+          }
+        }
+      });
+    };
+    
+    mainPageRef.current.addEventListener("scroll", handleScroll);
+    return () => {
+      if (mainPageRef.current) {
+        mainPageRef.current.removeEventListener("scroll", handleScroll);
+      }
+    };
+  }, [mainPageRef]);
 
   return (
     <nav className="navbar">

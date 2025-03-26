@@ -8,7 +8,7 @@ function ContactMeBar({mainPageRef}) {
       <div className="contact-content">
         <div className="socials">
           <a
-            href="https://www.linkedin.com"
+            href="https://www.linkedin.com/in/yassine-ben-fatah/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LinkedIn"
@@ -18,7 +18,7 @@ function ContactMeBar({mainPageRef}) {
             </svg>
           </a>
           <a
-            href="https://www.github.com"
+            href="https://github.com/kramatile"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GitHub"

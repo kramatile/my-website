@@ -86,7 +86,7 @@
 }
 
 .floating-image img {
-  width: 200px; /* Fixed width for image */
+  width: 400px; /* Fixed width for image */
   height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Subtle shadow */

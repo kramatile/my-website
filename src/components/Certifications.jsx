@@ -5,23 +5,36 @@ import "./Certifications.css";
 // Sample certification data (you can replace with your own)
 const certifications = [
   {
-    title: "React Developer Certification",
+    title: "Introduction to artificial intelligence with python",
+    issuer: "Harvard university",
+    date: "2023",
+    imageUrl: "/assets/certifications/CS50AI.webp",
+  },
+  {
+    title: "CCNAv7 : introduction aux réseaux",
+    issuer: "Cisco",
+    date: "2023",
+    imageUrl: "/assets/certifications/CCNA-1.webp",
+  },
+  {
+    title: "Introduction to neural networks with pytorch",
     issuer: "Coursera",
     date: "2023",
-    imageUrl: "https://example.com/react-cert.jpg", // Replace with real image URLs
+    imageUrl: "/assets/certifications/pytorch-intro.jpg", // Replace with real image URLs
   },
   {
-    title: "Machine Learning Fundamentals",
+    title: "Machine Learning Specialization",
     issuer: "Stanford Online",
-    date: "2022",
-    imageUrl: "https://example.com/ml-cert.jpg",
+    date: "2024",
+    imageUrl: "/assets/certifications/machine-learning.jpg",
   },
   {
-    title: "Data Science with Python",
-    issuer: "Udemy",
-    date: "2021",
-    imageUrl: "https://example.com/data-science-cert.jpg",
+    title: "Introduction to docker",
+    issuer: "Coursera",
+    date: "2024",
+    imageUrl: "/assets/certifications/intro-docker.jpg",
   },
+  
 ];
 
 function Certifications() {

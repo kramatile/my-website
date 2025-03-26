@@ -99,22 +99,22 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: calc(100vw-80px);
-  height: 100vh;
+  width: 100vw; /* Full viewport width */
+  height: 100vh; /* Full viewport height */
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 1000;
+  z-index: 3000000; /* High z-index to cover everything */
   animation: fadeIn 0.3s ease-in;
-  /* Add padding to account for navbar */
-  padding-left: 80px; /* Adjust based on navbar width (e.g., 80-100px) */
+  margin: 0;
+  padding: 0;
 }
 
 .project-modal-content {
   background-color: #ffffff;
   border-radius: 16px;
-  max-width: 90%;
+  max-width: 80%; /* Default for desktop */
   max-height: 90vh;
   overflow-y: auto;
   display: flex;
@@ -122,8 +122,7 @@
   position: relative;
   padding: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  /* Ensure content doesn't overlap navbar */
-  margin-left: auto; /* Push content to the right */
+  margin-left: auto;
   margin-right: auto;
 }
 
@@ -202,9 +201,9 @@
 }
 
 /* Responsive Adjustments */
-@media (max-width: 1024px) {
+@media (max-width: 1024px) { /* Tablets and smaller laptops */
   .project-card {
-    max-width: 300px;
+    max-width: 320px; /* Slightly smaller for better grid fit */
   }
 
   .project-image {
@@ -234,11 +233,14 @@
   }
 
   .project-modal {
-    padding-left: 90px; /* Adjust for slightly narrower navbar */
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
   }
 
   .project-modal-content {
-    max-width: 85%;
+    max-width: 85%; /* Slightly wider for tablets */
+    padding: 15px;
   }
 
   .modal-image {
@@ -252,11 +254,20 @@
   .modal-description {
     font-size: 1rem;
   }
+
+  .modal-links {
+    gap: 15px;
+  }
+
+  .modal-link {
+    font-size: 1rem;
+  }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Mobile devices */
   .project-card {
-    max-width: 280px;
+    max-width: 100%; /* Full width for single-column layout */
+    margin: 0 auto; /* Center if in a grid */
   }
 
   .project-image {
@@ -271,8 +282,13 @@
     font-size: 0.9rem;
   }
 
+  .project-content {
+    padding: 15px; /* Reduce padding */
+  }
+
   .project-links {
     gap: 10px;
+    padding: 0 15px 15px 15px;
   }
 
   .project-link {
@@ -285,11 +301,13 @@
   }
 
   .project-modal {
-    padding-left: 70px; /* Adjust for mobile navbar width */
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
   }
 
   .project-modal-content {
-    max-width: 90%;
+    max-width: 90%; /* Wider for mobile */
     padding: 15px;
   }
 
@@ -306,21 +324,21 @@
   }
 
   .modal-links {
-    gap: 15px;
+    gap: 12px;
   }
 
   .modal-link {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 480px) { /* Small mobile devices */
   .project-card {
     max-width: 100%;
   }
 
   .project-image {
-    height: 150px;
+    height: 140px; /* Smaller image height */
   }
 
   .project-title {
@@ -332,9 +350,13 @@
     line-height: 1.4;
   }
 
+  .project-content {
+    padding: 12px;
+  }
+
   .project-links {
-    padding: 0 10px 10px 10px;
     gap: 8px;
+    padding: 0 12px 12px 12px;
   }
 
   .project-link {
@@ -351,12 +373,13 @@
   }
 
   .project-modal {
-    padding-left: 50px; /* Maintain padding for navbar */
-    padding-right: 5px;
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
   }
 
   .project-modal-content {
-    max-width: 95%;
+    max-width: 95%; /* Nearly full width */
     padding: 10px;
   }
 
@@ -379,7 +402,7 @@
   }
 
   .modal-links {
-    gap: 12px;
+    gap: 10px;
   }
 
   .modal-link {
@@ -387,7 +410,11 @@
   }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 320px) { /* Very small screens */
+  .project-card {
+    max-width: 100%;
+  }
+
   .project-image {
     height: 120px;
   }
@@ -400,8 +427,13 @@
     font-size: 0.8rem;
   }
 
+  .project-content {
+    padding: 10px;
+  }
+
   .project-links {
     gap: 6px;
+    padding: 0 10px 10px 10px;
   }
 
   .project-link {
@@ -414,7 +446,20 @@
   }
 
   .project-modal {
-    padding-left: 60px; /* Minimal padding for tiny screens */
+    width: 100vw;
+    height: 100vh;
+    padding: 0;
+  }
+
+  .project-modal-content {
+    max-width: 80%; /* Almost edge-to-edge */
+    padding: 50px;
+  }
+
+  .modal-close {
+    font-size: 1.6rem;
+    top: 6px;
+    right: 6px;
   }
 
   .modal-image {
@@ -430,7 +475,7 @@
   }
 
   .modal-links {
-    gap: 10px;
+    gap: 8px;
   }
 
   .modal-link {

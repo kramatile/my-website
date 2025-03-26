@@ -6,32 +6,41 @@ import "./Projects.css";
 // Sample project data (you can move this to a separate file or pass as props)
 const projects = [
   {
-    imageUrl: "https://example.com/project1.jpg",
+    imageUrl: "./assets/portfolio.webp",
     title: "Portfolio Website",
     description:
-      "A responsive portfolio built with React and CSS. This is a longer description that will be truncated in the preview but fully visible in the modal. Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "A responsive portfolio built with React. This is a static website designed to display my projects and achievements in a fun and creative way !",
     links: [
-      { url: "https://github.com/user/repo1", label: "GitHub", icon: "/github-icon.png" },
-      { url: "https://live-demo1.com", label: "Live Demo" },
+      { url: "https://github.com/user/repo1", label: "GitHub", icon: "./assets/github-logo.png" },
+      { url: "https://benfatahyassine.netlify.app/", label: "Live Demo" },
     ],
   },
   {
-    imageUrl: "https://example.com/project2.jpg",
-    title: "E-Commerce Platform",
+    imageUrl: "./assets/kidney.webp",
+    title: "Kidney tumor detection",
     description:
-      "A full-stack e-commerce solution with React, Node.js, and MongoDB. Features include user authentication, product filtering, and payment integration.",
+      "This is a website desgined with react and flask to display the results of CNN that detects tumors and stones in kidney images (tensorflow).",
     links: [
-      { url: "https://github.com/user/repo2", label: "GitHub", icon: "/github-icon.png" },
+      { url: "https://github.com/kramatile/kidney-tumor-prediction-app", label: "GitHub", icon: "./assets/github-logo.png" },
       { url: "https://live-demo2.com", label: "Live Demo" },
     ],
   },
   {
-    imageUrl: null, // No image example
-    title: "Task Manager",
+    imageUrl: "./assets/descent.webp", 
+    title: "Deep Learning Library",
     description:
-      "A simple task management app built with vanilla JavaScript. Helps users organize daily tasks efficiently.",
+      "I have developped deep neural and cnn's from scratch using maths and numpy",
     links: [
-      { url: "https://github.com/user/repo3", label: "GitHub", icon: "/github-icon.png" },
+      { url: "https://github.com/kramatile/Deep-Learning-from-Scratch", label: "GitHub", icon: "./assets/github-logo.png" },
+    ],
+  },
+  {
+    imageUrl: null, 
+    title: "Tweets sentiment analysis",
+    description:
+      "I have developped a tweets sentiment analysis plateform using spacy",
+    links: [
+      { url: "https://github.com/user/repo3", label: "GitHub", icon: "./assets/github-logo.png" },
     ],
   },
 ];

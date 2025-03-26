@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import ContactMeBar from "./ContactMeBar";
 import "./MainPage.css"
 import HeroPage from "./HeroPage";
@@ -7,9 +7,7 @@ import Projects from "./Projects";
 import Certifications from "./Certifications";
 import ContactMe from "./ContactMe";
 
-function MainPage(){
-    const mainPageRef = useRef(null);
-    
+function MainPage({mainPageRef}){
     return (
         <div className="main-page" ref={mainPageRef}>
             <ContactMeBar mainPageRef={mainPageRef}/>
