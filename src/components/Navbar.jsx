@@ -16,11 +16,12 @@ function Navbar({mainPageRef}) {
 
   useEffect(() => {
     if (!mainPageRef.current) return; // Exit if ref isn’t ready
-
+  
+    const mainPage = mainPageRef.current; // Store ref value in a variable
     const handleScroll = () => {
-      const scrollPosition = mainPageRef.current.scrollTop + 100; // Offset for navbar height
+      const scrollPosition = mainPage.scrollTop + 100; // Offset for navbar height
       sections.forEach((section) => {
-        const sectionId = section === "Contact Me" ? "contact-me" : section.toLowerCase();
+        const sectionId = section.toLowerCase();
         const element = document.getElementById(sectionId);
         if (element) {
           const { offsetTop, offsetHeight } = element;
@@ -33,14 +34,13 @@ function Navbar({mainPageRef}) {
         }
       });
     };
-    
-    mainPageRef.current.addEventListener("scroll", handleScroll);
+  
+    mainPage.addEventListener("scroll", handleScroll);
     return () => {
-      if (mainPageRef.current) {
-        mainPageRef.current.removeEventListener("scroll", handleScroll);
-      }
+      mainPage.removeEventListener("scroll", handleScroll);
     };
-  }, [mainPageRef]);
+  }, [mainPageRef]); // Depend on mainPageRef.current explicitly
+  
 
   return (
     <nav className="navbar">
