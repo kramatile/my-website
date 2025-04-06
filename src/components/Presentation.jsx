@@ -19,31 +19,29 @@ function Presentation() {
         <div className="content">
           <div className="text-content">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim lorem. Proin a justo eget eros
-              placerat feugiat. Vestibulum at dolor euismod, molestie elit a, lacinia orci...
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim lorem. Proin a justo eget eros
-              placerat feugiat. Vestibulum at dolor euismod, molestie elit a, lacinia orci...
+              Hello there. When asked to define myself, I find it limiting to reduce my being to a single label. As my friend often says:
+              <em> "The essence of existence is that it has none." – AM.K</em>
+               Still, one must begin somewhere. I carry the beautiful name of BEN FATAH Yassine—an artist in soul, a craftsman in action, and a logician in thought.
             </p>
-            <p>
-              Aenean maximus iaculis libero, vel vehicula ante. Morbi blandit sit amet orci et sollicitudin. Etiam
-              elementum dictum lorem a pellentesque...
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim lorem. Proin a justo eget eros
-              placerat feugiat. Vestibulum at dolor euismod, molestie elit a, lacinia orci...
-            </p>
-            <p>
-              Curabitur ullamcorper ipsum iaculis ex tincidunt congue. Nam justo leo, interdum eleifend rutrum cursus,
-              condimentum quis dolor...
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim lorem. Proin a justo eget eros
-              placerat feugiat. Vestibulum at dolor euismod, molestie elit a, lacinia orci...
 
-            </p>
             <p>
-              Cras tempus elementum risus, vitae tempor nunc gravida eget. Sed maximus tempor euismod. Integer placerat
-              erat eu sapien convallis...
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vitae enim lorem. Proin a justo eget eros
-              placerat feugiat. Vestibulum at dolor euismod, molestie elit a, lacinia orci...
-
+              <strong>Ruling #1: Speak your truth.</strong> I firmly believe in the power of honesty—toward oneself and toward others. 
+              Even when it is uncomfortable, it is the weight of truth that molds us. Growth is born through friction, not comfort.
+              A truth left untouched becomes stagnant; it must be nourished by experience and learning, or else it decays like an untended flame.
             </p>
+
+            <p>
+              <strong>Ruling #2: Expose yourself to beauty.</strong> There is strength in submitting to the judgment of beauty—its elegance, its harshness, its depth.
+              It becomes a compass, a “boussole,” pointing us toward meaning when everything else falls into chaos. 
+              Through the pursuit of beauty, we shape our vision, our craft, and ultimately, ourselves.
+            </p>
+
+            <p>
+              <strong>Ruling #3: On est jamais dérangé que par soi-même.</strong> 
+              Our deepest irritations are often reflections of unresolved fragments within. 
+              The external world merely mirrors our inner conflicts. To confront them is to reclaim peace.
+            </p>
+
             <div className="presentation-contacts">
               <div className="links">
                 <span className="links-text">Links</span>

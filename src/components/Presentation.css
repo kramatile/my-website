@@ -2,49 +2,74 @@
 
 #presentation {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  padding: 80px 20px; /* Adjusted for smaller screens */
+  padding: 80px 20px;
 }
 
 .container {
   box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  width: 100%; /* Full width with max constraint */
-  max-width: 1500px; /* Larger max-width for desktops */
+  width: 100%;
+  max-width: 1500px;
   padding: 30px;
-  margin: 0 auto; /* Centered */
+  margin: 0 auto;
 }
 
 .content {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   display: flex;
   flex-direction: row;
   gap: 40px;
   flex-wrap: wrap;
-  justify-content: space-between; /* Better distribution */
+  justify-content: space-between;
 }
 
 .text-content {
   flex: 1;
-  min-width: 280px; /* Slightly smaller min-width for flexibility */
-  max-width: 100%; /* Prevent overflow */
+  min-width: 280px;
+  max-width: 100%;
 }
 
 .text-content p {
   color: whitesmoke;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
+  font-size: 1.15rem;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
   font-family: "Kanit", sans-serif;
   font-weight: 300;
+  margin-bottom: 24px;
+  text-align: justify;
+  max-width: 750px;
+  position: relative;
+}
+
+.text-content p:not(:last-child)::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 1px;
+  background: #00ff9d;
+  margin: 20px 0 0;
+  opacity: 0.3;
+}
+
+.text-content em {
+  display: block;
+  font-style: italic;
+  font-size: 1rem;
+  color: #aaa;
+  margin: 8px 0 16px;
+}
+
+.text-content strong {
+  display: block;
+  color: #00ff9d;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Kanit", sans-serif;
 }
 
 .links {
@@ -52,7 +77,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: flex-start; /* Left-aligned for consistency */
+  justify-content: flex-start;
   gap: 8px;
   font-size: 1.5rem;
   font-family: "Kanit", sans-serif;
@@ -65,38 +90,56 @@
   gap: 16px;
   align-items: center;
   margin-top: 20px;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
+  flex-wrap: wrap;
 }
 
 .icon {
   width: 32px;
   height: 32px;
-  fill: #f9f9f9; /* Ensure fill matches links */
-  transition: transform 0.3s ease; /* Only transform for simplicity */
+  fill: #f9f9f9;
+  transition: transform 0.3s ease, fill 0.3s ease;
 }
 
 .icon:hover {
-  transform: scale(1.1);
+  transform: scale(1.15);
+  fill: #00ff9d;
 }
 
 .skills-content {
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
   flex: 1;
   min-width: 280px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
-  justify-content: center; /* Align skills consistently */
-  align-items: stretch; /* Full width for skills */
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* CSS for the fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-content {
+  opacity: 0; /* Initially hidden */
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+.text-content.loaded {
+  opacity: 1;
 }
 
 /* Responsive Adjustments */
 @media (max-width: 1200px) {
   .container {
-    max-width: 1000px; /* Reduce max-width for larger tablets */
+    max-width: 1000px;
     padding: 20px;
   }
 
@@ -105,7 +148,7 @@
   }
 
   .text-content p {
-    font-size: 1rem;
+    font-size: 1.05rem;
   }
 
   .links {
@@ -120,11 +163,11 @@
 
 @media (max-width: 768px) {
   #presentation {
-    padding: 60px 15px; /* Reduced padding */
+    padding: 60px 15px;
   }
 
   .container {
-    max-width: 700px; /* Smaller container */
+    max-width: 700px;
     padding: 15px;
   }
 
@@ -134,16 +177,17 @@
   }
 
   .text-content {
-    min-width: 100%; /* Full width on smaller screens */
+    min-width: 100%;
   }
 
   .text-content p {
-    font-size: 0.95rem;
+    font-size: 1rem;
+    line-height: 1.7;
   }
 
   .links {
     font-size: 1.3rem;
-    justify-content: center; /* Center links on smaller screens */
+    justify-content: center;
   }
 
   .icon {
@@ -158,12 +202,12 @@
 
 @media (max-width: 480px) {
   #presentation {
-    padding: 100px 10px; /* Adjusted for navbar overlap */
+    padding: 100px 10px;
   }
 
   .container {
     padding: 10px;
-    max-width: 100%; /* Full width */
+    max-width: 100%;
   }
 
   .content {
@@ -171,9 +215,9 @@
   }
 
   .text-content p {
-    font-size: 0.9rem; /* Slightly larger than before for readability */
-    line-height: 1.5;
-    margin-bottom: 15px;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
   }
 
   .links {
@@ -183,7 +227,7 @@
 
   .presentation-contacts {
     gap: 12px;
-    justify-content: center; /* Center contacts */
+    justify-content: center;
   }
 
   .icon {
@@ -194,7 +238,7 @@
 
 @media (max-width: 320px) {
   #presentation {
-    padding: 80px 8px; /* Minimal padding */
+    padding: 80px 8px;
   }
 
   .container {
@@ -202,7 +246,7 @@
   }
 
   .text-content p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   .links {

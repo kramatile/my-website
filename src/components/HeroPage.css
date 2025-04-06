@@ -1,5 +1,3 @@
-/* HeroPage.css */
-
 /* Base Styles */
 .hero-page {
   box-sizing: border-box;
@@ -91,6 +89,23 @@
   transform: scale(1.05); /* Slight scale */
   box-shadow: 0 6px 15px rgba(0, 255, 157, 0.4); /* Stronger shadow */
 }
+.pres > * {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.pres > *:nth-child(1) { animation-delay: 0.2s; }
+.pres > *:nth-child(2) { animation-delay: 0.4s; }
+.pres > *:nth-child(3) { animation-delay: 0.6s; }
+.pres > *:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 /* Responsive Adjustments */
 
@@ -110,7 +125,9 @@
   .hero-page .pres {
     max-width: 70%; /* Adjustable width */
     margin: 0; /* Remove margins for flex centering */
+    margin-top: 100px;
     text-align: left; /* Keep text left-aligned */
+    padding-top: 20px;
   }
 
   .hero-page .myName {
@@ -145,8 +162,9 @@
   }
 
   .hero-page .pres {
-    margin-top: 8rem; /* Increased top margin */
+    margin-top: 0px; /* Increased top margin */
     margin-left: 0; /* Remove left margin */
+
     max-width: 100%; /* Full width */
   }
 

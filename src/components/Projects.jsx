@@ -21,8 +21,7 @@ const projects = [
     description:
       "This is a website desgined with react and flask to display the results of CNN that detects tumors and stones in kidney images (tensorflow).",
     links: [
-      { url: "https://github.com/kramatile/kidney-tumor-prediction-app", label: "GitHub", icon: "./assets/github-logo.png" },
-      { url: "https://live-demo2.com", label: "Live Demo" },
+      { url: "https://github.com/kramatile/kidney-tumor-prediction-app", label: "GitHub", icon: "./assets/github-logo.png" }
     ],
   },
   {

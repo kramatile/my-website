@@ -98,32 +98,32 @@
 .project-modal {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100vw; /* Full viewport width */
-  height: 100vh; /* Full viewport height */
+  left: 0; /* Updated to cover full viewport */
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 3000000; /* High z-index to cover everything */
+  z-index: 3000000;
   animation: fadeIn 0.3s ease-in;
   margin: 0;
-  padding: 0;
+  padding: 80px 20px 20px; /* Top padding to account for navbar */
+  box-sizing: border-box;
 }
 
 .project-modal-content {
   background-color: #ffffff;
   border-radius: 16px;
-  max-width: 80%; /* Default for desktop */
-  max-height: 90vh;
+  max-width: 80%;
+  max-height: calc(100vh - 160px); /* Prevent modal from exceeding viewport height */
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 20px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
 }
 
 .modal-close {
@@ -156,6 +156,7 @@
 
 .modal-content {
   padding: 20px;
+  z-index: 300000;
 }
 
 .modal-title {
@@ -200,284 +201,203 @@
   to { opacity: 1; }
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) { /* Tablets and smaller laptops */
+/* Responsive Adjustments for Preview Card & Modal */
+@media (max-width: 1024px) {
   .project-card {
-    max-width: 320px; /* Slightly smaller for better grid fit */
+    max-width: 320px;
   }
-
   .project-image {
     height: 180px;
   }
-
   .project-title {
     font-size: 1.4rem;
   }
-
   .project-description {
     font-size: 0.95rem;
   }
-
   .project-links {
     gap: 12px;
     padding: 0 15px 15px 15px;
   }
-
   .project-link {
     font-size: 0.95rem;
   }
-
   .link-icon {
     width: 22px;
     height: 22px;
   }
-
-  .project-modal {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-  }
-
   .project-modal-content {
-    max-width: 85%; /* Slightly wider for tablets */
+    max-width: 700px;
     padding: 15px;
   }
-
   .modal-image {
     max-height: 350px;
   }
-
   .modal-title {
     font-size: 1.8rem;
   }
-
   .modal-description {
     font-size: 1rem;
   }
-
   .modal-links {
     gap: 15px;
   }
-
   .modal-link {
     font-size: 1rem;
   }
 }
 
-@media (max-width: 768px) { /* Mobile devices */
+@media (max-width: 768px) {
   .project-card {
-    max-width: 100%; /* Full width for single-column layout */
-    margin: 0 auto; /* Center if in a grid */
+    max-width: 100%;
+    margin: 0 auto;
   }
-
   .project-image {
     height: 160px;
   }
-
   .project-title {
     font-size: 1.3rem;
   }
-
   .project-description {
     font-size: 0.9rem;
   }
-
   .project-content {
-    padding: 15px; /* Reduce padding */
+    padding: 15px;
   }
-
   .project-links {
     gap: 10px;
     padding: 0 15px 15px 15px;
   }
-
   .project-link {
     font-size: 0.9rem;
   }
-
   .link-icon {
     width: 20px;
     height: 20px;
   }
-
-  .project-modal {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-  }
-
   .project-modal-content {
-    max-width: 90%; /* Wider for mobile */
-    padding: 15px;
+    max-width: 500px;
+    margin-left: 40px;
   }
-
   .modal-image {
     max-height: 300px;
   }
-
   .modal-title {
     font-size: 1.6rem;
   }
-
   .modal-description {
     font-size: 0.95rem;
   }
-
   .modal-links {
     gap: 12px;
   }
-
   .modal-link {
     font-size: 0.95rem;
   }
 }
 
-@media (max-width: 480px) { /* Small mobile devices */
+@media (max-width: 480px) {
   .project-card {
     max-width: 100%;
   }
-
   .project-image {
-    height: 140px; /* Smaller image height */
+    height: 140px;
   }
-
   .project-title {
     font-size: 1.2rem;
   }
-
   .project-description {
     font-size: 0.85rem;
     line-height: 1.4;
   }
-
   .project-content {
     padding: 12px;
   }
-
   .project-links {
     gap: 8px;
     padding: 0 12px 12px 12px;
   }
-
   .project-link {
     font-size: 0.85rem;
   }
-
   .link-icon {
     width: 18px;
     height: 18px;
   }
-
-  .no-links {
-    font-size: 0.8rem;
-  }
-
-  .project-modal {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-  }
-
   .project-modal-content {
-    max-width: 95%; /* Nearly full width */
+    max-width: 95%;
     padding: 10px;
   }
-
   .modal-close {
     font-size: 1.8rem;
     top: 8px;
     right: 8px;
   }
-
   .modal-image {
     max-height: 250px;
   }
-
   .modal-title {
     font-size: 1.4rem;
   }
-
   .modal-description {
     font-size: 0.9rem;
   }
-
   .modal-links {
     gap: 10px;
   }
-
   .modal-link {
     font-size: 0.9rem;
   }
 }
 
-@media (max-width: 320px) { /* Very small screens */
+@media (max-width: 320px) {
   .project-card {
     max-width: 100%;
   }
-
   .project-image {
     height: 120px;
   }
-
   .project-title {
     font-size: 1.1rem;
   }
-
   .project-description {
     font-size: 0.8rem;
   }
-
   .project-content {
     padding: 10px;
   }
-
   .project-links {
     gap: 6px;
     padding: 0 10px 10px 10px;
   }
-
   .project-link {
     font-size: 0.8rem;
   }
-
   .link-icon {
     width: 16px;
     height: 16px;
   }
-
-  .project-modal {
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-  }
-
   .project-modal-content {
-    max-width: 80%; /* Almost edge-to-edge */
+    max-width: 80%;
     padding: 50px;
   }
-
   .modal-close {
     font-size: 1.6rem;
     top: 6px;
     right: 6px;
   }
-
   .modal-image {
     max-height: 200px;
   }
-
   .modal-title {
     font-size: 1.2rem;
   }
-
   .modal-description {
     font-size: 0.85rem;
   }
-
   .modal-links {
     gap: 8px;
   }
-
   .modal-link {
     font-size: 0.85rem;
   }
