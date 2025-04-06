@@ -16,7 +16,7 @@
 /* Presentation Container */
 .hero-page .pres {
   max-width: 900px; /* Max width for desktop */
-  margin-top: 2rem; /* Top spacing */
+  margin-top: 1rem; /* Top spacing */
   margin-left: 4rem; /* Left offset for desktop */
   text-align: left; /* Left-aligned text */
 }
