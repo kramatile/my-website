@@ -3,7 +3,7 @@
   box-sizing: border-box;
   background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark gradient background */
   color: #ffffff; /* White text for contrast */
-  min-height: 100vh; /* Full viewport height */
+  min-height: calc(100vh - 80px); /* Full viewport height */
   width: 100%; /* Full width */
   display: flex;
   flex-direction: column;
@@ -16,7 +16,7 @@
 /* Presentation Container */
 .hero-page .pres {
   max-width: 900px; /* Max width for desktop */
-  margin-top: 5rem; /* Top spacing */
+  margin-top: 2rem; /* Top spacing */
   margin-left: 4rem; /* Left offset for desktop */
   text-align: left; /* Left-aligned text */
 }
