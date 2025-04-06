@@ -8,6 +8,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     background: linear-gradient(135deg, #1a1a2e, #16213e);
+    scroll-behavior: smooth;
   }
   
   /* Responsive layout */
